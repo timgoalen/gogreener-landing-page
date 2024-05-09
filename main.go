@@ -64,9 +64,14 @@ func (app *SimpleApp) HandleWithSimpleServices(path string, handler func(*Simple
 	})
 }
 
+// TODO: import the google font properly.
 var homePageContent string = `
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+	</style>
+
 	<h2>Save carbon by building faster web apps in Go.</h2>
-	<p>Edit the <strong>main.go</strong> file to get started.</p>
+	<p class="get-started">Edit the <strong>main.go</strong> file to get started.</p>
 
 	<h1>GoGreener</h1>
 
@@ -84,6 +89,16 @@ var css string = `
 		height: 100dvh;
 		background: #000;
 		background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(214,219,220,1) 100%);
+		font-family: "Inter";
+		text-align: center;
+	}
+
+	h2 {
+		font-family: "Roboto Mono";
+	}
+
+	.get-started {
+		font-family: "Roboto Mono";
 	}
 	`
 
@@ -120,7 +135,7 @@ func main() {
 			// Let's use our new WritePageProvider, instead of this version that uses app and s separately
 			// app.Page("Hello", greener.Text("Hello <>!")).WriteHTMLTo(s.W())
 			// s.WritePage("Hello", greener.Text(homePageContent))
-			s.WritePage("Hello", greener.HTMLPrintf(homePageContent))
+			s.WritePage("GoGreener", greener.HTMLPrintf(homePageContent))
 		}
 	})
 
