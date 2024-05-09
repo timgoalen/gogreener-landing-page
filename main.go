@@ -70,17 +70,32 @@ var homePageContent string = `
 	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 	</style>
 
-	<h2>Save carbon by building faster web apps in Go.</h2>
-	<p class="get-started">Edit the <strong>main.go</strong> file to get started.</p>
+	<h2 class="headline">Save carbon by building faster web apps in Go.</h2>
+	<div class="get-started">Edit the <strong>main.go</strong> file to get started.</div>
 
-	<h1>GoGreener</h1>
+	<div class="circle-container">
+		<div class="circle">
+		</div>
+	</div>
 
-	<h3>Docs</h3>
-	<p>Find in-depth information about GoGreener.</p>
-	<h3>Features</h3>
-	<p>Explore the unique features of this Go framework.</p>
-	<h3>Deploy</h3>
-	<p>Follow these deployment instructions.</p>
+	<div class="title-container">
+		<h1 class="title">GoGreener</h1>
+	</div>
+	
+	<div class="links">
+		<div class="link">
+			<h3>Docs</h3>
+			<p>Find in-depth information about GoGreener.</p>
+		</div>
+		<div class="link">
+			<h3>Features</h3>
+			<p>Explore the unique features of this Go framework.</p>
+		</div>
+		<div class="link">
+			<h3>Deploy</h3>
+			<p>Follow these deployment instructions.</p>
+		</div>
+	</div>
 	`
 
 var css string = `
@@ -93,12 +108,55 @@ var css string = `
 		text-align: center;
 	}
 
-	h2 {
+	.get-started {
+		font-size: 1.25rem;
 		font-family: "Roboto Mono";
 	}
 
-	.get-started {
+	.headline {
+		font-size: 1.5rem;
 		font-family: "Roboto Mono";
+		font-weight: 400;
+	}
+
+	.circle-container,
+	.title-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: grid;
+		place-items: center;
+		height: 100vh;
+		height: 100dvh;
+		width: 100%;
+	}
+
+	.circle {
+		height: 400px;
+		width: 400px;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		background: #FFF;
+		background: radial-gradient(circle, #D6DBDC 0%, #FFF 80%);
+		filter: blur(4px);
+	}
+
+	.title {
+		font-size: 3rem;
+	}
+
+	.links {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr)
+	}
+
+	.link {
+		display: flex;
 	}
 	`
 
