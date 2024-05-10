@@ -71,11 +71,18 @@ var homePageContent string = `
 	</style>
 
 	<h2 class="headline">Save carbon by building faster web apps in Go.</h2>
-	<div class="get-started">Edit the <strong>main.go</strong> file to get started.</div>
+
+	<div class="get-started-container">
+		<div class="get-started">Edit the <strong>main.go</strong> file to get started.</div>
+	</div>
 
 	<div class="circle-container">
-		<div class="circle">
-		</div>
+		<div class="circle"></div>
+	</div>
+
+	<div class="circle-glow-container">
+			<div class="circle-glow"></div>
+			<div class="circle-blob"></div>
 	</div>
 
 	<div class="title-container">
@@ -83,22 +90,34 @@ var homePageContent string = `
 	</div>
 	
 	<div class="links">
-		<div class="link">
-			<h3>Docs</h3>
-			<p>Find in-depth information about GoGreener.</p>
+		<div class="link-container">
+			<div class="links-content">
+				<h3 class="link-title">Docs</h3>
+				<p class="link-body">Find in-depth information about GoGreener.</p>
+			</div>
 		</div>
-		<div class="link">
-			<h3>Features</h3>
-			<p>Explore the unique features of this Go framework.</p>
+		<div class="link-container">
+			<div class="links-content">
+				<h3 class="link-title">Features</h3>
+				<p class="link-body">Explore the unique features of this Go framework.</p>
+			</div>
 		</div>
-		<div class="link">
-			<h3>Deploy</h3>
-			<p>Follow these deployment instructions.</p>
+		<div class="link-container">
+			<div class="links-content">
+				<h3 class="link-title">Deploy</h3>
+				<p class="link-body">Follow these deployment instructions.</p>
+			</div>
 		</div>
 	</div>
 	`
 
 var css string = `
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
 	body {
 		height: 100vh;
 		height: 100dvh;
@@ -108,18 +127,31 @@ var css string = `
 		text-align: center;
 	}
 
-	.get-started {
-		font-size: 1.25rem;
-		font-family: "Roboto Mono";
-	}
-
 	.headline {
 		font-size: 1.5rem;
 		font-family: "Roboto Mono";
 		font-weight: 400;
+		margin: 2rem;
+		color: #313131;
+	}
+
+	.get-started-container {
+		display: grid;
+		place-items: center;
+	}
+
+	.get-started {
+		font-size: 1.25rem;
+		font-family: "Roboto Mono";
+		border: 1px solid white;
+		border-radius: 8px;
+		padding: 0.5rem;
+		background-color: #ffffff59;
+		color: #797979;
 	}
 
 	.circle-container,
+	.circle-glow-container,
 	.title-container {
 		position: absolute;
 		top: 0;
@@ -129,6 +161,10 @@ var css string = `
 		height: 100vh;
 		height: 100dvh;
 		width: 100%;
+	}
+
+	.circle-glow-container {
+		position: relative;
 	}
 
 	.circle {
@@ -142,6 +178,31 @@ var css string = `
 		filter: blur(4px);
 	}
 
+	.circle-glow {
+		height: 550px;
+		width: 550px;
+		border-radius: 50%;
+		background-color: #6df36a;
+		opacity: 9%;
+		filter: blur(91px);
+		position: absolute;
+		top: -7%;
+		left: 27%;
+		z-index: -1;
+	}
+	
+	.circle-blob {
+		height: 130px;
+		width: 130px;
+		border-radius: 50%;
+		background-color: #6df36a;
+		opacity: 22%;
+		filter: blur(72px);
+		position: absolute;
+		top: 25%;
+		left: 51%;
+	}
+
 	.title {
 		font-size: 3rem;
 	}
@@ -151,12 +212,33 @@ var css string = `
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr)
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		padding-bottom: 2rem;
 	}
 
-	.link {
+	.link-container {
+	}
+
+	.links-content {
 		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 300px;
+		margin: 1rem;
+	}
+
+	.link-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	.link-body {
+		text-align: left;
+		font-size: 0.9rem;
+		padding-top: 0.3rem;
+		color: #797979;
 	}
 	`
 
