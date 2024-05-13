@@ -89,26 +89,31 @@ var homePageContent string = `
 		<h1 class="title">GoGreener</h1>
 	</div>
 	
-	<div class="links">
-		<div class="link-container">
-			<div class="links-content">
+	<section class="links">
+		<a class="link-container" href="https://github.com/thejimmyg/greener" rel="noopener" target="_blank">
+			<div class="link-bullet-point"></div>
+			<div class="link-content">
 				<h3 class="link-title">Docs</h3>
 				<p class="link-body">Find in-depth information about GoGreener.</p>
 			</div>
-		</div>
-		<div class="link-container">
-			<div class="links-content">
+		</a>
+
+		<a class="link-container" href="https://github.com/thejimmyg/greener" rel="noopener" target="_blank">
+			<div class="link-bullet-point"></div>
+			<div class="link-content">
 				<h3 class="link-title">Features</h3>
 				<p class="link-body">Explore the unique features of this Go framework.</p>
 			</div>
-		</div>
-		<div class="link-container">
-			<div class="links-content">
+		</a>
+		
+		<a class="link-container" href="https://github.com/thejimmyg/greener" rel="noopener" target="_blank">
+			<div class="link-bullet-point"></div>
+			<div class="link-content">
 				<h3 class="link-title">Deploy</h3>
 				<p class="link-body">Follow these deployment instructions.</p>
 			</div>
-		</div>
-	</div>
+		</a>
+	</section>
 	`
 
 var css string = `
@@ -118,10 +123,14 @@ var css string = `
 		padding: 0;
 	}
 
+	a {
+  		text-decoration: none;
+  		color: inherit;
+	}
+
 	body {
 		height: 100vh;
 		height: 100dvh;
-		background: #000;
 		background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(214,219,220,1) 100%);
 		font-family: "Inter";
 		text-align: center;
@@ -141,7 +150,7 @@ var css string = `
 	}
 
 	.get-started {
-		font-size: 1.25rem;
+		font-size: 1.1rem;
 		font-family: "Roboto Mono";
 		border: 1px solid white;
 		border-radius: 8px;
@@ -205,6 +214,7 @@ var css string = `
 
 	.title {
 		font-size: 3rem;
+		cursor: default;
 	}
 
 	.links {
@@ -219,19 +229,38 @@ var css string = `
 	}
 
 	.link-container {
+		display: flex;
 	}
 
-	.links-content {
+	.link-bullet-point {
+		height: 24px;
+		width: 24px;
+		border-radius: 50%;
+		background-color: #6df36a;
+		opacity: 50%;
+		filter: blur(8px);
+		margin-top: 1.1rem;
+		transition: height 0.2s ease-in-out;
+	}
+
+	.link-container:hover .link-bullet-point {
+		height: 48px
+	}
+
+	.link-content {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		max-width: 300px;
 		margin: 1rem;
+		cursor: pointer;
 	}
 
 	.link-title {
 		font-size: 1.5rem;
 		font-weight: 600;
+		opacity: 85%;
+		transition: opacity 0.2s ease-in-out;
 	}
 
 	.link-body {
@@ -239,6 +268,13 @@ var css string = `
 		font-size: 0.9rem;
 		padding-top: 0.3rem;
 		color: #797979;
+		opacity: 85%;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	.link-container:hover .link-body,
+	.link-container:hover .link-title {
+		opacity: 100%;
 	}
 	`
 
