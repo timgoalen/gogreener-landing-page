@@ -101,8 +101,8 @@ var homePageContent string = `
 		<a class="link-container" href="https://github.com/thejimmyg/greener" rel="noopener" target="_blank">
 			<div class="link-bullet-point"></div>
 			<div class="link-content">
-				<h3 class="link-title">Docs</h3>
-				<p class="link-body">Follow a  quick start guide or read the in-depth docs.</p>
+				<h3 class="link-title">Learn</h3>
+				<p class="link-body">Follow a  quick-start guide or read the in-depth docs.</p>
 			</div>
 		</a>
 		
