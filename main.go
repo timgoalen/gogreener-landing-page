@@ -110,7 +110,7 @@ var homePageContent string = `
 			<div class="link-bullet-point"></div>
 			<div class="link-content">
 				<h3 class="link-title">Deploy</h3>
-				<p class="link-body">Share your site with the help of these instructions.</p>
+				<p class="link-body">Launch your site with the help of these instructions.</p>
 			</div>
 		</a>
 	</section>
