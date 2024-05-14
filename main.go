@@ -93,16 +93,16 @@ var homePageContent string = `
 		<a class="link-container" href="https://github.com/thejimmyg/greener" rel="noopener" target="_blank">
 			<div class="link-bullet-point"></div>
 			<div class="link-content">
-				<h3 class="link-title">Docs</h3>
-				<p class="link-body">Find in-depth information about GoGreener.</p>
+				<h3 class="link-title">Features</h3>
+				<p class="link-body">Explore the unique features of this Go web framework.</p>
 			</div>
 		</a>
 
 		<a class="link-container" href="https://github.com/thejimmyg/greener" rel="noopener" target="_blank">
 			<div class="link-bullet-point"></div>
 			<div class="link-content">
-				<h3 class="link-title">Features</h3>
-				<p class="link-body">Explore the unique features of this Go framework.</p>
+				<h3 class="link-title">Docs</h3>
+				<p class="link-body">Follow a  quick start guide or read the in-depth docs.</p>
 			</div>
 		</a>
 		
@@ -110,7 +110,7 @@ var homePageContent string = `
 			<div class="link-bullet-point"></div>
 			<div class="link-content">
 				<h3 class="link-title">Deploy</h3>
-				<p class="link-body">Follow these deployment instructions.</p>
+				<p class="link-body">Share your site with the help of these instructions.</p>
 			</div>
 		</a>
 	</section>
@@ -131,7 +131,7 @@ var css string = `
 	body {
 		height: 100vh;
 		height: 100dvh;
-		background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(214,219,220,1) 100%);
+		background: linear-gradient(0deg, #000 0%, #2E2E2E 100%);
 		font-family: "Inter";
 		text-align: center;
 	}
@@ -141,7 +141,7 @@ var css string = `
 		font-family: "Roboto Mono";
 		font-weight: 400;
 		margin: 2rem;
-		color: #313131;
+		color: #FFF;
 	}
 
 	.get-started-container {
@@ -152,11 +152,10 @@ var css string = `
 	.get-started {
 		font-size: 1.1rem;
 		font-family: "Roboto Mono";
-		border: 1px solid white;
+		border: 1px solid #545454;
 		border-radius: 8px;
 		padding: 0.5rem;
-		background-color: #ffffff59;
-		color: #797979;
+		color: #D2D2D2;
 	}
 
 	.circle-container,
@@ -182,9 +181,7 @@ var css string = `
 		border-radius: 50%;
 		display: grid;
 		place-items: center;
-		background: #FFF;
-		background: radial-gradient(circle, #D6DBDC 0%, #FFF 80%);
-		filter: blur(4px);
+		background: radial-gradient(circle, #000 42%, rgb(61 61 61 / 85%) 100%);
 	}
 
 	.circle-glow {
@@ -192,7 +189,7 @@ var css string = `
 		width: 550px;
 		border-radius: 50%;
 		background-color: #6df36a;
-		opacity: 9%;
+		opacity: 4%;
 		filter: blur(91px);
 		position: absolute;
 		top: -7%;
@@ -205,16 +202,19 @@ var css string = `
 		width: 130px;
 		border-radius: 50%;
 		background-color: #6df36a;
-		opacity: 22%;
+		opacity: 24%;
 		filter: blur(72px);
 		position: absolute;
-		top: 25%;
+		top: 34%;
 		left: 51%;
 	}
 
 	.title {
 		font-size: 3rem;
 		cursor: default;
+		background: linear-gradient(to right, rgba(248, 119, 0, 0.65), #FFF, rgb(55, 153, 107, 0.75));
+		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
 	}
 
 	.links {
@@ -236,8 +236,8 @@ var css string = `
 		height: 24px;
 		width: 24px;
 		border-radius: 50%;
-		background-color: #6df36a;
-		opacity: 50%;
+		background-color: #F87700;
+		opacity: 22%;
 		filter: blur(8px);
 		margin-top: 1.1rem;
 		transition: height 0.2s ease-in-out;
@@ -251,23 +251,24 @@ var css string = `
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		max-width: 300px;
-		margin: 1rem;
+		max-width: 200px;
+		margin: 1rem 0 1rem 1rem;
 		cursor: pointer;
 	}
 
 	.link-title {
 		font-size: 1.5rem;
-		font-weight: 600;
+		font-weight: 500;
 		opacity: 85%;
 		transition: opacity 0.2s ease-in-out;
+		color: #FFF;
 	}
 
 	.link-body {
 		text-align: left;
 		font-size: 0.9rem;
 		padding-top: 0.3rem;
-		color: #797979;
+		color: #929292;
 		opacity: 85%;
 		transition: opacity 0.2s ease-in-out;
 	}
