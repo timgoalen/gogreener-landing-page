@@ -1,6 +1,6 @@
 module github.com/timgoalen/gogreener-landing-page
 
-go 1.22.2
+go 1.21.0
 
 require github.com/thejimmyg/greener v0.1.1
 
