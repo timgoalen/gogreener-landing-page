@@ -144,13 +144,15 @@ var css string = `
 		font-size: 1.5rem;
 		font-family: "Roboto Mono";
 		font-weight: 400;
-		margin: 2rem;
+		padding: 2rem;
 		color: #FFF;
 	}
 
 	.get-started-container {
 		display: grid;
 		place-items: center;
+		max-width: 94%;
+    	margin: auto;
 	}
 
 	.get-started {
@@ -175,10 +177,6 @@ var css string = `
 		width: 100%;
 	}
 
-	.circle-glow-container {
-		position: relative;
-	}
-
 	.circle {
 		height: 400px;
 		width: 400px;
@@ -196,7 +194,7 @@ var css string = `
 		opacity: 4%;
 		filter: blur(91px);
 		position: absolute;
-		top: -7%;
+		top: 8%;
 		left: 27%;
 		z-index: -1;
 	}
@@ -209,7 +207,7 @@ var css string = `
 		opacity: 24%;
 		filter: blur(72px);
 		position: absolute;
-		top: 34%;
+		top: 49%;
 		left: 51%;
 	}
 
@@ -280,6 +278,51 @@ var css string = `
 	.link-container:hover .link-body,
 	.link-container:hover .link-title {
 		opacity: 100%;
+	}
+
+	@media (max-width: 820px) {
+		.links {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.link-content {
+			max-width: 300px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		body {
+			height: 100%;
+		}
+
+		.circle-container,
+		.circle-glow-container {
+			display: none;
+		}
+
+		.title-container {
+			position: static;
+			display: grid;
+			place-items: center;
+			width: 100%;
+			height: auto;
+    		margin: 2rem 0;
+		}
+
+		.links {
+			position: static;
+			padding-bottom: 0;
+		}
+
+		.link-container {
+			max-width: 94%;
+			margin: auto;
+		}
+
+		.link-bullet-point {
+			display: none;
+		}
 	}
 	`
 
