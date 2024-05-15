@@ -70,26 +70,30 @@ var homePageContent string = `
 	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 	</style>
 
-	<h2 class="headline">Save carbon by building faster web apps in Go.</h2>
+	<header>
+		<h2 class="headline">Save carbon by building faster web apps in Go.</h2>
 
-	<div class="get-started-container">
-		<div class="get-started">Edit the <strong>main.go</strong> file to get started.</div>
-	</div>
+		<div class="get-started-container">
+			<div class="get-started">Edit the <strong>main.go</strong> file to get started.</div>
+		</div>
+	</header>
 
-	<div class="circle-container">
-		<div class="circle"></div>
-	</div>
+	<main>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
 
-	<div class="circle-glow-container">
-			<div class="circle-glow"></div>
-			<div class="circle-blob"></div>
-	</div>
+		<div class="circle-glow-container">
+				<div class="circle-glow"></div>
+				<div class="circle-blob"></div>
+		</div>
 
-	<div class="title-container">
-		<h1 class="title">GoGreener</h1>
-	</div>
+		<div class="title-container">
+			<h1 class="title">GoGreener</h1>
+		</div>
+	</main>
 	
-	<section class="links">
+	<footer class="links">
 		<a class="link-container" href="https://github.com/thejimmyg/greener" rel="noopener" target="_blank">
 			<div class="link-bullet-point"></div>
 			<div class="link-content">
@@ -113,7 +117,7 @@ var homePageContent string = `
 				<p class="link-body">Launch your site with the help of these instructions.</p>
 			</div>
 		</a>
-	</section>
+	</footer>
 	`
 
 var css string = `
